@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Comment Analytics - Social Media Analysis Tool</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="landing-container">
+        <header class="header">
+            <h1>YouTube Comment Analytics</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="hero-section">
+                <h2 class="hero-title">Youtube Analytics Tool</h2>
+                <p class="hero-subtitle">Analyze YouTube video using XLM-RoBERTa</p>
+            </div>
+
+            <div class="input-section">
+                <div class="input-container">
+                    <input 
+                        type="text" 
+                        id="videoUrl" 
+                        class="url-input" 
+                        placeholder="Enter YouTube video URL..."
+                        aria-label="YouTube video URL"
+                    >
+                    <button id="analyzeBtn" class="analyze-btn">Analyze</button>
+                </div>
+                <p class="input-hint">Paste any YouTube video URL to start analyzing comments</p>
+            </div>
+
+            <div id="loadingSection" class="loading-section" style="display: none;">
+                <div class="loading-spinner"></div>
+                <p class="loading-text">Analyzing video comments...</p>
+                <p class="loading-subtext">This may take 30-60 seconds depending on the number of comments</p>
+            </div>
+
+            <div id="errorSection" class="error-section" style="display: none;">
+                <div class="error-icon">⚠️</div>
+                <p class="error-text" id="errorText"></p>
+                <button id="retryBtn" class="retry-btn">Try Again</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Powered by XLM-RoBERTa Cross-lingual Sentiment Analysis</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

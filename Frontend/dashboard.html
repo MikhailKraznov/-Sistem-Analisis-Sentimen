@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Results - YouTube Comment Analytics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>YouTube Comment Analytics</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active" data-section="overview">Overview</a>
+                <a href="#sentiment" class="nav-item" data-section="sentiment">Sentiment Analysis</a>
+                <a href="#traffic" class="nav-item" data-section="traffic">Weekly Traffic</a>
+                <a href="#demographics" class="nav-item" data-section="demographics">Demographics</a>
+                <a href="#comments" class="nav-item" data-section="comments">Comments</a>
+                <a href="#export" class="nav-item" data-section="export">Export Data</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="newAnalysisBtn" class="new-analysis-btn">New Analysis</button>
+            </div>
+        </aside>
+
+        <main class="main-dashboard">
+            <div class="dashboard-header">
+                <div class="video-info">
+                    <h3 id="videoTitle">Loading...</h3>
+                    <p id="videoChannel">Channel: Loading...</p>
+                </div>
+            </div>
+
+            <!-- Overview Section -->
+            <section id="overviewSection" class="dashboard-section active">
+                <h2 class="section-title">Analysis Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value" id="totalComments">0</div>
+                        <div class="stat-label">TOTAL COMMENTS</div>
+                    </div>
+                    <div class="stat-card positive">
+                        <div class="stat-value" id="positiveCount">0</div>
+                        <div class="stat-label">POSITIVE</div>
+                    </div>
+                    <div class="stat-card negative">
+                        <div class="stat-value" id="negativeCount">0</div>
+                        <div class="stat-label">NEGATIVE</div>
+                    </div>
+                    <div class="stat-card neutral">
+                        <div class="stat-value" id="neutralCount">0</div>
+                        <div class="stat-label">NEUTRAL</div>
+                    </div>
+                </div>
+                <div class="overview-summary">
+                    <p id="summaryText">Loading analysis summary...</p>
+                </div>
+            </section>
+
+            <!-- Sentiment Analysis Section -->
+            <section id="sentimentSection" class="dashboard-section">
+                <h2 class="section-title">Sentiment Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+                <div class="sentiment-stats">
+                    <p><strong>Model:</strong> XLM-RoBERTa Cross-lingual Sentiment Analysis</p>
+                    <p><strong>Confidence:</strong> <span id="avgConfidence">0%</span> average across all predictions</p>
+                </div>
+            </section>
+
+            <!-- Weekly Traffic Section -->
+            <section id="trafficSection" class="dashboard-section">
+                <h2 class="section-title">Weekly Comment Traffic</h2>
+                <div class="chart-container">
+                    <canvas id="trafficChart"></canvas>
+                </div>
+                <p class="traffic-note" id="trafficNote">Loading traffic data...</p>
+            </section>
+
+            <!-- Demographics Section -->
+            <section id="demographicsSection" class="dashboard-section">
+                <h2 class="section-title">Language Demographics</h2>
+                <div class="language-list" id="languageList">
+                    <!-- Language bars will be inserted here -->
+                </div>
+            </section>
+
+            <!-- Comments Section -->
+            <section id="commentsSection" class="dashboard-section">
+                <h2 class="section-title">Individual Comments</h2>
+    
+            <!-- Filter Buttons -->
+            <div class="comment-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="positive">Positive</button>
+                <button class="filter-btn" data-filter="negative">Negative</button>
+                <button class="filter-btn" data-filter="neutral">Neutral</button>
+                <button class="filter-btn" data-filter="relevant">Most Relevant</button>
+            </div>
+    
+             <div class="comments-list" id="commentsList">
+        <!-- Comments will be inserted here -->
+            </div>
+            </section>
+
+            <!-- Export Section -->
+            <section id="exportSection" class="dashboard-section">
+                <h2 class="section-title">Export Data</h2>
+                <p class="export-description">
+                    Download the complete analysis results including all comments, 
+                    sentiment classifications, and statistical summaries.
+                </p>
+                <div class="export-buttons">
+                    <button id="exportCsvBtn" class="export-btn csv">Export CSV</button>
+                    <button id="exportJsonBtn" class="export-btn json">Export JSON</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
