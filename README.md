@@ -1,18 +1,10 @@
 ---
-title: YouTube Sentiment Analysis UAT
-emoji: 🎬
-colorFrom: blue
-colorTo: green
-sdk: gradio
-sdk_version: 4.19.0
-app_file: app.py
-pinned: false
----
+title: YouTube Sentiment Analysis 
 
-# YouTube Sentiment Analysis - UAT
+MODEL : https://huggingface.co/veisg/xlm-roberta-youtube-final
 
-Analyze sentiment and language distribution of YouTube comments using XLM-RoBERTa model.
 
+# YouTube Sentiment Analysis 
 ## Features
 - Sentiment analysis (Positive, Neutral, Negative)
 - Multi-language detection
@@ -22,5 +14,3 @@ Analyze sentiment and language distribution of YouTube comments using XLM-RoBERT
 1. Enter YouTube video URL
 2. Click "Analyze"
 3. Wait 30-60 seconds for results
-
-**For UAT Testing Only**
