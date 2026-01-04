@@ -2,7 +2,7 @@ import os
 
 class Config:
     # YouTube API
-    YOUTUBE_API_KEY = "AIzaSyDNCmdmZI-XKoBbXI7s_Y-YloipDLW4j9s"  # Replace with your API key
+    YOUTUBE_API_KEY = "put ur API HERE"  # Replace with your API key
     
     # Model paths
     MODEL_PATH = os.getenv("MODEL_PATH", "cardiffnlp/twitter-xlm-roberta-base-sentiment")
