@@ -8,6 +8,8 @@ Backend : HUGGINGSPACES(PUSH "youtube-sentiment-uat" to huggingspace
 
 ML Model Repository: https://huggingface.co/veisg/xlm-roberta-youtube-final
 
+SWITCH TO "youtube-sentiment-uat" FOLDER TO RUN THE SCRIPT
+
 # YouTube Sentiment Analysis 
 ## Features
 - Sentiment analysis (Positive, Neutral, Negative)
